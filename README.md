@@ -1,70 +1,152 @@
-# Getting Started with Create React App
+📊 Excel Formula Automation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Excel Formula Automation is a full-stack MERN (MongoDB, Express, React, Node.js) application designed to simplify and automate Excel operations.
 
-## Available Scripts
+Instead of manually applying formulas in Excel, users can upload a file, select the formula they want (like VLOOKUP, Filtering, Sorting, etc.), specify the required columns, and instantly receive processed results through a clean web interface.
 
-In the project directory, you can run:
+This project eliminates repetitive Excel tasks, improves efficiency, and provides an easy-to-use alternative for non-technical users.
 
-### `npm start`
+🚀 Features
+User Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🔐 Secure Login & Signup
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+📤 Upload Excel (.xlsx) or CSV files
 
-### `npm test`
+🧮 Apply Excel formulas like VLOOKUP
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🔍 Select columns and conditions dynamically
 
-### `npm run build`
+📊 View processed data in the browser
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+📥 Download the updated Excel file
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🕒 View processing history
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+📑 Dashboard to manage uploaded files
 
-### `npm run eject`
+Admin Features
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+👤 View all users
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+🗂️ View uploaded file history
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+🛠 Manage system configurations
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Technical Features
 
-## Learn More
+RESTful API for file processing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Automatic file validation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Formula engine using XLSX library
 
-### Code Splitting
+JWT authentication for secure access
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Fully responsive UI with TailwindCSS
 
-### Analyzing the Bundle Size
+Modular React pages (Login, Signup, Dashboard, etc.)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+🛠️ Tech Stack
+Frontend
 
-### Making a Progressive Web App
+React.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Tailwind CSS
 
-### Advanced Configuration
+Axios
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+React Router
 
-### Deployment
+Context API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Backend
 
-### `npm run build` fails to minify
+Node.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Express.js
+
+Multer (file uploads)
+
+XLSX / ExcelJS for file processing
+
+JWT for authentication
+
+MongoDB for storing users and history
+
+📂 Folder Structure
+excel_project/
+│
+├── backend/
+│ ├── routes/
+│ │ ├── authRoutes.js
+│ │ ├── adminRoutes.js
+│ │ └── fileRoutes.js
+│ ├── server.js
+│ ├── package.json
+│ └── config.js
+│
+├── frontend/
+│ ├── src/
+│ │ ├── pages/
+│ │ ├── components/
+│ │ ├── utils/
+│ │ └── index.js
+│ ├── public/
+│ ├── package.json
+│ └── tailwind.config.js
+│
+└── README.md
+
+🔧 Environment Setup
+Create a .env file inside backend:
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+PORT=5000
+
+💻 Installation & Setup
+Clone the Repository
+git clone https://github.com/JanviSingh1712/Excel_project.git
+cd Excel_project
+
+Install Backend Dependencies
+cd backend
+npm install
+
+Install Frontend Dependencies
+cd ../frontend
+npm install
+
+Start Backend
+cd backend
+npm start
+
+Start Frontend
+cd frontend
+npm start
+
+🧪 API Endpoints
+Method Endpoint Description
+POST /api/auth/login User login
+POST /api/auth/signup User registration
+POST /api/file/upload Upload file
+POST /api/file/vlookup Apply VLOOKUP formula
+GET /api/file/history Get processing history
+📦 Deployment Options
+
+You can deploy this project on:
+
+Frontend: Vercel or Netlify
+
+Backend: Render / Railway
+
+Database: MongoDB Atlas
+
+🤝 Contribution Guidelines
+
+Feel free to fork the project, open issues, or submit pull requests.
+All contributions are appreciated!
+
+⭐ Support
+
+If you find this project useful, please consider giving it a ⭐ on GitHub!
